@@ -2,41 +2,12 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Store, createStore } from 'redux';
-import { Provider } from 'react-redux';
+import {ChatExampleData} from "./ChatExampleData";
+import {ChatApp} from "./components/ChatApp";
+import {ChatWebAPIUtils} from "./utils/ChatWebAPIUtils";
 
-import { App } from './components/app';
-import { counterApp } from './reducers';
+ChatExampleData.init();
 
-declare const require: (name: String) => any;
+ChatWebAPIUtils.getAllMessages();
 
-interface IHotModule {
-  hot?: { accept: (path: string, callback: () => void) => void };
-};
-
-declare const module: IHotModule;
-
-function configureStore(): Store {
-  const store: Store = createStore(counterApp);
-
-  if (module.hot) {
-    module.hot.accept('./reducers', () => {
-      const nextRootReducer: any = require('./reducers').counterApp;
-      store.replaceReducer(nextRootReducer);
-    });
-  }
-
-  return store;
-}
-
-const store: Store = configureStore();
-
-class Main extends React.Component<{}, {}> {
-  public render(): React.ReactElement<Provider> {
-    return (<Provider store={store}>
-      <App />
-    </Provider>);
-  }
-}
-
-ReactDOM.render(<Main />, document.getElementById('app'));
+ReactDOM.render(<ChatApp />, document.getElementById('react'));

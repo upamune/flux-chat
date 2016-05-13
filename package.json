@@ -39,6 +39,9 @@
     "webpack-hot-middleware": "^2.6.4"
   },
   "dependencies": {
+    "eventemitter3": "^1.2.0",
+    "flux": "^2.1.1",
+    "object-assign": "^4.1.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.1.2",

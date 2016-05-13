@@ -15,7 +15,16 @@
       "commit": "ba424f7ee39717d51c17699a09ac8df312a7e9a1"
     },
     "react/react.d.ts": {
-      "commit": "ba424f7ee39717d51c17699a09ac8df312a7e9a1"
+      "commit": "1ec3d510e0c4d7c50e708ca7cb0765c7e06fa2ed"
+    },
+    "flux/flux.d.ts": {
+      "commit": "1ec3d510e0c4d7c50e708ca7cb0765c7e06fa2ed"
+    },
+    "object-assign/object-assign.d.ts": {
+      "commit": "1ec3d510e0c4d7c50e708ca7cb0765c7e06fa2ed"
+    },
+    "eventemitter3/eventemitter3.d.ts": {
+      "commit": "1ec3d510e0c4d7c50e708ca7cb0765c7e06fa2ed"
     }
   }
 }

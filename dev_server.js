@@ -14,6 +14,10 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
+app.get('/css/chatapp.css', (req, res) => {
+  res.sendFile(path.join(__dirname, 'css', 'chatapp.css'));
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
